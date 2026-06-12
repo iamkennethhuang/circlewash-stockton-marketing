@@ -1,0 +1,547 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  color: #ffffff;
+}
+
+.headerSolid {
+  background: #030303;
+}
+
+.headerOverlay {
+  color: #ffffff;
+}
+
+.toolbar.MuiToolbar-root {
+  position: relative;
+  min-height: 92px;
+  justify-content: flex-end;
+  padding-inline: clamp(22px, 5vw, 72px);
+}
+
+.headerLogoLink {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.headerNav {
+  margin-left: auto;
+}
+
+.navLink {
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.navLink.active {
+  color: #ff4c52;
+}
+
+.siteMain {
+  min-height: 54vh;
+}
+
+.logoWrap {
+  position: relative;
+  width: clamp(176px, 22vw, 330px);
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.scriptLogo {
+  position: relative;
+  width: 100%;
+  color: #ffffff;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(34px, 4vw, 72px);
+  line-height: 1;
+  text-align: center;
+  text-shadow:
+    0 0 7px #ffffff,
+    0 0 18px #0873ff,
+    0 0 28px #075bff,
+    0 0 42px #ff171f;
+}
+
+.hero {
+  position: relative;
+  min-height: min(760px, 92vh);
+  background: #000000;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.heroImg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  transform: translateX(-50%);
+  opacity: 1;
+  filter: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  min-height: min(760px, 92vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.heroTitle {
+  max-width: 660px;
+  font-size: clamp(52px, 7vw, 104px);
+  line-height: 0.95;
+}
+
+.heroCopy {
+  width: min(510px, 88vw);
+  margin-top: 28px;
+  font-size: clamp(15px, 1.8vw, 18px);
+  line-height: 1.45;
+}
+
+.section {
+  padding-block: clamp(52px, 7vw, 94px);
+}
+
+.pageIntro {
+  max-width: 740px;
+  margin-bottom: clamp(34px, 5vw, 62px);
+}
+
+.pageIntro h1 {
+  font-size: clamp(44px, 6vw, 82px);
+  line-height: 0.95;
+  margin-bottom: 18px;
+}
+
+.pageIntro p {
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.45;
+}
+
+.servicesSection {
+  background: #ffffff;
+}
+
+.serviceGrid > .MuiGrid-root {
+  display: flex;
+}
+
+.serviceTile {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 280px;
+  overflow: hidden;
+  background: #111111;
+}
+
+.tileImg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.tileImg,
+.dryingImg,
+.washFoldHeroImg,
+.stepImg,
+.mapImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tileShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 20%, rgba(0, 0, 0, 0.78) 100%);
+}
+
+.tileTitle {
+  position: absolute;
+  z-index: 2;
+  left: 28px;
+  bottom: 28px;
+  width: 230px;
+  min-height: 84px;
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+  font-size: clamp(26px, 2.4vw, 40px);
+  line-height: 1.05;
+}
+
+.tileButton {
+  position: absolute;
+  z-index: 3;
+  right: 28px;
+  bottom: 28px;
+  width: 42px;
+  height: 42px;
+  color: #ffffff;
+  background: #d71920;
+}
+
+.tileButton:hover {
+  background: #b91319;
+}
+
+.featureGrid {
+  margin-top: clamp(30px, 4vw, 58px);
+}
+
+.serviceBody {
+  max-width: 360px;
+  margin-top: 16px;
+  line-height: 1.45;
+}
+
+.featureItem {
+  min-height: 76px;
+}
+
+.featureItem p {
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.featureIcon {
+  width: 64px;
+  height: 64px;
+  color: #ffffff;
+  background: #070707;
+  box-shadow: 0 0 0 5px #f0f0f0;
+}
+
+.dryingSection {
+  position: relative;
+  min-height: clamp(460px, 61vw, 690px);
+  display: flex;
+  align-items: flex-end;
+  color: #ffffff;
+  background: #050505;
+  overflow: hidden;
+}
+
+.dryingImg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  transform: translateX(-50%);
+  opacity: 1;
+  filter: none;
+}
+
+.dryingShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(35deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+.dryingContent {
+  position: relative;
+  z-index: 1;
+  padding-bottom: clamp(46px, 6vw, 76px);
+}
+
+.dryingContent h2 {
+  font-size: clamp(44px, 6vw, 82px);
+  line-height: 0.95;
+}
+
+.dryingContent p {
+  width: min(590px, 88vw);
+  margin-top: 18px;
+}
+
+.reviewsSection {
+  min-height: 580px;
+}
+
+.googleWord {
+  font-weight: 900;
+  color: #4285f4;
+}
+
+.googleLogo {
+  display: block;
+  width: 74px;
+  height: auto;
+}
+
+.googleLogo.small {
+  width: 58px;
+}
+
+.star {
+  color: #ffb300;
+}
+
+.reviewButton {
+  align-self: flex-end;
+  color: #050505;
+  font-size: 16px;
+}
+
+.reviewButton .MuiButton-endIcon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 0;
+  color: #ffffff;
+  border-radius: 50%;
+  background: #d71920;
+}
+
+.reviewButton .MuiButton-endIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.reviewItem {
+  max-width: 380px;
+}
+
+.contentCard {
+  min-height: 230px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+
+.contentCard h2 {
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.washFoldSection {
+  background: #ffffff;
+}
+
+.washFoldHero {
+  position: relative;
+  min-height: clamp(360px, 40vw, 560px);
+  display: flex;
+  align-items: center;
+  background: #d9d9d9;
+  overflow: hidden;
+}
+
+.washFoldHeroImg {
+  position: absolute;
+  inset: 0;
+  filter: grayscale(1);
+  opacity: 0.72;
+}
+
+.washFoldHero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.12));
+}
+
+.washFoldHeroCopy {
+  position: relative;
+  z-index: 1;
+}
+
+.washFoldHeroCopy h2 {
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1;
+}
+
+.washFoldHeroCopy p {
+  margin-top: 28px;
+  font-size: clamp(20px, 2.6vw, 32px);
+}
+
+.stepsWrap {
+  padding-block: clamp(56px, 7vw, 98px);
+}
+
+.stepsTitle {
+  font-size: clamp(32px, 4.3vw, 54px);
+  margin-bottom: clamp(34px, 5vw, 60px);
+}
+
+.stepImageFrame {
+  height: clamp(190px, 17vw, 250px);
+  background: #ededed;
+  overflow: hidden;
+}
+
+.stepCard h3 {
+  font-size: clamp(25px, 2.6vw, 36px);
+}
+
+.stepCard p {
+  max-width: 360px;
+}
+
+.faqSection {
+  padding-block: clamp(42px, 5.5vw, 72px);
+  background: #d7d5ea;
+}
+
+.faqSection h2 {
+  font-size: clamp(34px, 4vw, 54px);
+}
+
+.faqItem {
+  background: transparent;
+  border-top: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.faqItem:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.faqItem .MuiAccordionSummary-root {
+  min-height: 78px;
+  padding-inline: 0;
+}
+
+.faqItem .MuiAccordionSummary-content p {
+  font-size: clamp(20px, 2vw, 30px);
+}
+
+.faqItem .MuiAccordionDetails-root {
+  padding-inline: 0;
+}
+
+.footer {
+  padding-block: clamp(48px, 6vw, 78px);
+  color: #ffffff;
+  background: #030303;
+}
+
+.footer .logoWrap {
+  width: 290px;
+}
+
+.footer h3 {
+  font-size: 26px;
+}
+
+.footerText {
+  max-width: 430px;
+  line-height: 1.45;
+}
+
+.mapGrid {
+  display: flex;
+}
+
+.mapFrame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 270px;
+  background: #f5f5f5;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.googleMap {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 270px;
+  border: 0;
+  pointer-events: none;
+}
+
+.footerDivider {
+  margin-block: clamp(34px, 5vw, 52px);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.contactStack {
+  font-weight: 800;
+}
+
+.contactMap {
+  min-height: 360px;
+}
+
+.contactMap::before {
+  height: 360px;
+}
+
+@media (max-width: 760px) {
+  .toolbar.MuiToolbar-root {
+    min-height: 78px;
+    padding-inline: 18px;
+  }
+
+  .logoWrap {
+    width: 174px;
+    min-height: 58px;
+  }
+
+  .hero {
+    min-height: 690px;
+  }
+
+  .heroContent {
+    min-height: 690px;
+    justify-content: flex-end;
+    padding-bottom: 58px;
+  }
+
+  .featureItem {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .featureIcon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .reviewButton {
+    align-self: flex-start;
+  }
+
+  .footer .logoWrap {
+    width: 230px;
+  }
+}
