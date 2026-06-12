@@ -357,7 +357,7 @@ body {
 
 .washFoldHero {
   position: relative;
-  min-height: clamp(360px, 40vw, 560px);
+  min-height: min(760px, 92vh);
   display: flex;
   align-items: center;
   background: #d9d9d9;
@@ -367,20 +367,16 @@ body {
 .washFoldHeroImg {
   position: absolute;
   inset: 0;
-  filter: grayscale(1);
-  opacity: 0.72;
-}
-
-.washFoldHero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.12));
 }
 
 .washFoldHeroCopy {
   position: relative;
   z-index: 1;
+  min-height: min(760px, 92vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 300px;
 }
 
 .washFoldHeroCopy h2 {
@@ -400,6 +396,7 @@ body {
 .stepsTitle {
   font-size: clamp(32px, 4.3vw, 54px);
   margin-bottom: clamp(34px, 5vw, 60px);
+  padding-bottom: 50px;
 }
 
 .stepImageFrame {
@@ -425,9 +422,14 @@ body {
   font-size: clamp(34px, 4vw, 54px);
 }
 
-.faqItem {
-  background: transparent;
+.faqItem.MuiAccordion-root {
+  background: #d7d5ea;
   border-top: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.faqItem .MuiAccordionSummary-root,
+.faqItem .MuiAccordionDetails-root {
+  background: #d7d5ea;
 }
 
 .faqItem:last-child {

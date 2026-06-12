@@ -1,7 +1,11 @@
 export const navItems = [
-  { label: 'Services', to: '/services' },
-  { label: 'Blog', to: '/blog' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Services', to: '/services', key: 'services' , subItems: [
+    { label: 'Wash & Fold', to: '/services/wash-fold', key: 'wash-fold' },
+    { label: 'Self Service', to: '/services/self-service', key: 'self-service' },
+    { label: 'Commercial Towels', to: '/services/commercial-towels', key: 'commercial-towels' },
+  ]},
+  { label: 'Blog', to: '/blog', key: 'blog' },
+  { label: 'Contact', to: '/contact', key: 'contact' },
 ];
 
 export const services = [

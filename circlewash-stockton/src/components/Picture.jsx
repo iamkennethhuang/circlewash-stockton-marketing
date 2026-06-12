@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import imageCandidates from '../data/images';
+import imageCandidates, { getImageSrc } from '../data/images';
 
 function Picture({ name, alt, className, sx }) {
   const candidates = imageCandidates[name] || [];
@@ -12,14 +12,14 @@ function Picture({ name, alt, className, sx }) {
     <Box
       component="img"
       className={className}
-      src={`${import.meta.env.BASE_URL}images/${candidates[0]}`}
+      src={getImageSrc(name)}
       alt={alt}
       sx={sx}
       onError={(event) => {
         const index = Number(event.currentTarget.dataset.index || 0);
         if (index + 1 < candidates.length) {
           event.currentTarget.dataset.index = index + 1;
-          event.currentTarget.src = `${import.meta.env.BASE_URL}images/${candidates[index + 1]}`;
+          event.currentTarget.src = getImageSrc(name, index + 1);
           return;
         }
         event.currentTarget.style.display = 'none';

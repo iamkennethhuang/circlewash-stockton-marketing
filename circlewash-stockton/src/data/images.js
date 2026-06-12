@@ -1,13 +1,14 @@
 const imageCandidates = {
+  favicon: ['cw_favicon.png'],
   logo: ['cw_logo.jpg'],
   hero: ['circle_wash_hero.jpg'],
-  washFold: ['washandfold.jpg'],
+  washFold: ['wash-and-fold.jpg'],
   selfService: ['selfservice.jpg'],
   towels: ['commercial-towels.jpg'],
   drying: ['free-drying.jpg'],
-  dropOff: ['drop-off.jpg'],
+  dropOff: ['dropoff.jpg'],
   wash: ['wash.jpg'],
-  pickup: ['pickup.jpg'],
+  pickup: ['pickup.jpeg'],
   map: ['map.png'],
   googleLogo: ['Google-logo.png'],
   payments: ['payments.jpg'],
@@ -15,5 +16,16 @@ const imageCandidates = {
   laundryProducts: ['laundry-products.png'],
   wifi: ['entertainment.jpg'],
 };
+
+export function getImageSrc(name, candidateIndex = 0) {
+  const candidates = imageCandidates[name] || [];
+  const fileName = candidates[candidateIndex];
+
+  if (!fileName) {
+    return null;
+  }
+
+  return `${import.meta.env.BASE_URL}images/${fileName}`;
+}
 
 export default imageCandidates;

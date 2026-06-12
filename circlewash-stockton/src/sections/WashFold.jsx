@@ -5,15 +5,8 @@ import Picture from '../components/Picture';
 function WashFold() {
   return (
     <Box component="section" className="washFoldSection">
-      <Box className="washFoldHero">
-        <Picture name="washFold" alt="Folded laundry and towels" className="washFoldHeroImg" />
-        <Container maxWidth="xl" className="washFoldHeroCopy">
-          <Typography variant="h2">How Wash & Fold Works</Typography>
-          <Typography>Your Laundry Helps Local Families Thrive.</Typography>
-        </Container>
-      </Box>
       <Container maxWidth="xl" className="stepsWrap">
-        <Typography variant="h2" className="stepsTitle">
+        <Typography variant="h3" className="stepsTitle">
           How wash & fold works
         </Typography>
         <Grid container spacing={{ xs: 3, md: 7 }}>
