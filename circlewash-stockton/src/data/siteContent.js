@@ -22,11 +22,13 @@ export const services = [
   },
 ];
 
+const base = import.meta.env.BASE_URL;
+
 export const features = [
-  { label: 'Epayment Accepted', image: '/images/payments.jpg' },
-  { label: 'Large Washer for comforters and blankets', image: '/images/large-washer.jpg' },
-  { label: 'Laundry Products', image: '/images/laundry-products.png' },
-  { label: 'Entertainment System with Free Wifi', image: '/images/entertainment.jpg' },
+  { label: 'Epayment Accepted', image: `${base}images/payments.jpg` },
+  { label: 'Large Washer for comforters and blankets', image: `${base}images/large-washer.jpg` },
+  { label: 'Laundry Products', image: `${base}images/laundry-products.png` },
+  { label: 'Entertainment System with Free Wifi', image: `${base}images/entertainment.jpg` },
 ];
 
 export const steps = [
