@@ -4,6 +4,8 @@ const imageCandidates = {
   hero: ['circle_wash_hero.jpg'],
   washFold: ['wash-and-fold.jpg'],
   selfService: ['selfservice.jpg'],
+  selfServiceHero: ['large-washer.png'],
+  insideWasher: ['inside-washer.jpg'],
   towels: ['commercial-towels.jpg'],
   drying: ['free-drying.jpg'],
   dropOff: ['dropoff.jpg'],
@@ -15,6 +17,7 @@ const imageCandidates = {
   largeWasher: ['large-washer.jpg'],
   laundryProducts: ['laundry-products.png'],
   wifi: ['entertainment.jpg'],
+  blog: ['blog.png'],
 };
 
 export function getImageSrc(name, candidateIndex = 0) {

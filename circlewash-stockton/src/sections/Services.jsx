@@ -1,5 +1,6 @@
 import { Avatar, Box, Container, Grid, IconButton, Stack, Typography } from '@mui/material';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
+import { Link as RouterLink } from 'react-router-dom';
 import { services, features } from '../data/siteContent';
 import Picture from '../components/Picture';
 
@@ -20,6 +21,8 @@ function Services() {
                   {service.title}
                 </Typography>
                 <IconButton
+                  component={RouterLink}
+                  to={service.to}
                   className="tileButton"
                   aria-label={`View ${service.title}`}
                   sx={{

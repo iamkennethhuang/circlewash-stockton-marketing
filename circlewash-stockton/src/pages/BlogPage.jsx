@@ -1,4 +1,5 @@
 import { Box, Container, Grid, Typography } from '@mui/material';
+import Picture from '../components/Picture';
 
 const posts = [
   {
@@ -19,13 +20,13 @@ function BlogPage() {
   return (
     <Box className="section">
       <Container maxWidth="xl">
-        <Box className="pageIntro">
+        <Box sx={{ mt:6, mb: 10 }}>
           <Typography variant="h1">Circle Wash Blog</Typography>
           <Typography>
             Updates, laundry tips, and local notes from the Circle Wash Stockton team.
           </Typography>
         </Box>
-        <Grid container spacing={3}>
+        <Grid container spacing={3} sx={{ mt: 10 }}>
           {posts.map((post) => (
             <Grid key={post.title} size={{ xs: 12, md: 4 }}>
               <Box className="contentCard">

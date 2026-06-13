@@ -7,6 +7,8 @@ import { footerColumns } from '../data/siteContent';
 import Logo from '../components/Logo';
 
 const address = '1101 E March Ln, Stockton, CA 95210';
+const phoneNumber = '4158287006';
+const email = 'support@circlewashstockton.com';
 const encodedAddress = encodeURIComponent(address);
 const mapEmbedUrl = `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
 const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`;
@@ -36,7 +38,16 @@ function Footer() {
               <Stack spacing={2}>
                 <Stack direction="row" spacing={1.5}>
                   <PlaceRoundedIcon />
-                  <Typography>1101 E March Ln, Stockton, CA 95210</Typography>
+                  <Link
+                    href={directionsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    color="inherit"
+                    underline="none"
+                    aria-label={`Get directions to ${address}`}
+                  >
+                    <Typography>{address}</Typography>
+                  </Link>
                 </Stack>
               </Stack>
 
@@ -45,9 +56,13 @@ function Footer() {
               <Stack spacing={1.2} mt={3}>
                 <Stack direction="row" spacing={1.5} alignItems="center">
                   <PhoneRoundedIcon fontSize="small" />
-                  <Typography>4158287006</Typography>
+                  <Link href={`tel:${phoneNumber}`} color="inherit" underline="none">
+                    <Typography>{phoneNumber}</Typography>
+                  </Link>
                 </Stack>
-                <Typography fontWeight={800}>circlewashstockton.com</Typography>
+                <Link href={`mailto:${email}`} color="inherit" underline="none">
+                  <Typography fontWeight={800}>{email}</Typography>
+                </Link>
               </Stack>
             </Grid>
             <Grid size={{ xs: 6 }}>
